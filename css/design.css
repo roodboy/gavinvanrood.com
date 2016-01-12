@@ -1,0 +1,182 @@
+/*
+apply a natural box layout model to all elements, but allowing components to change
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background:url(../images/paper_x1.jpg);
+  background-repeat: repeat;
+  font-family: 'Averta', sans-serif;
+  padding: 5px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi){
+/* retina images */
+  body {
+    background:url(../images/paper_x2.png);
+    background-size: 319px 319px;
+  }
+}
+
+.intro {
+  padding: 5px 45px;
+}
+
+.logo
+{
+  display: block;
+  text-indent: -1000px;
+  width: 350px;
+  height: 120px;
+  background:url(../images/Gavin_logo.png);
+  background:url(../images/Gavin_logo.svg);
+  background-repeat: no-repeat;
+}
+/* this styles the intro heading 3*/
+.intro h3 {
+  color: #323232;
+  max-width: 700px;
+  font-family: 'Averta', sans-serif;
+  font-weight:600;
+  font-size: 12px;
+  padding-top: 0px
+}
+
+
+.subhead {
+  color: #979797;
+  font-weight: 300;
+}
+
+/* This is a comment. Use dot before title (eg work-samples) to make the link.*/
+.work-samples {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.work-samples article {
+  width: 100%;
+  margin: 15px auto 0 auto;
+  /*background: rgba(255, 255, 255, 0);*/
+  float:left;
+}
+
+
+.work-title {
+  font-family: 'Averta', sans-serif;
+  font-weight:600;
+  font-size: 10px;
+  margin-bottom: 0.15em;
+}
+
+
+.work-detail {
+  font-family: 'Averta', sans-serif;
+  font-weight:300;
+  font-size: 10px;
+  margin-top: 0;
+}
+
+.work-desc {
+  display: none;
+}
+
+article img {
+  max-width: 100%;
+}
+
+.desc-holder {
+  display: none;
+}
+  /*
+}
+@media = command / talk to brower
+    ask the browser if the screen/window it is a minumum of 400px wide (at leat 400px, or more)
+    only apply these styles if you're 400px or more
+  */
+  @media(min-width:600px){
+    .work-samples article {
+      width: 350px;
+      margin: 10px 10px 0 0;
+    }
+  }
+
+  /*
+    ask the browser if the screen/window is a minumum of 1000px wide (at leat 1000px, or more)
+    only apply these styles if you're 1000px or more
+  */
+  @media(min-width:1000px){
+    .desc-holder {
+      display: block;
+    }
+    .intro {
+      float: left;
+      width: 380px;
+    }
+    .work-samples {
+      color: #323232;
+      font-family: 'Averta', sans-serif;
+      font-weight:900;
+      font-size: 10px;
+      padding-top: 80px;
+      width: 67%;
+      float: left;
+    }
+    .intro .work-desc {
+      color: #323232;
+      display: block;
+      font-family: 'Averta', sans-serif;
+      font-weight:200;
+      font-size: 12px;
+      padding-top: 80px
+    }
+  }
+  @media(min-width:1530px){
+    .work-samples {
+      width: 75%;
+    }
+  }
+  @media(min-width:1950px){
+    .work-samples {
+      width: 80%;
+    }
+  }
+
+
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ *
+ * Found at http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
