@@ -69,20 +69,32 @@ body {
   float:left;
 }
 
+.work-samples a,
+.work-samples a:link,
+.work-samples a:hover,
+.work-samples a:active
+.work-samples a:visited
+{
+  color: #fff;
+  text-decoration: none;
+}
 
 .work-title {
   font-family: 'Averta', sans-serif;
   font-weight:600;
   font-size: 10px;
   margin-bottom: 0.15em;
+  text-decoration: none;
+  color: #000;
 }
-
 
 .work-detail {
   font-family: 'Averta', sans-serif;
   font-weight:300;
   font-size: 10px;
   margin-top: 0;
+  text-decoration: none;
+  color: #000;
 }
 
 .work-desc {
@@ -150,7 +162,10 @@ article img {
     }
   }
 
-
+/* make all images on the detail page wide */
+.work-samples.detail img {
+  width: 100%;
+}
 
 /**
  * For modern browsers
