@@ -164,7 +164,8 @@ article img {
 
 /* make all images on the detail page wide */
 .work-samples.detail img {
-  width: 100%;
+  width: 100%; /* scale the images to full width of the column */
+  margin-bottom: 25px; /* add space between the images as thesy stack */
 }
 
 /**
