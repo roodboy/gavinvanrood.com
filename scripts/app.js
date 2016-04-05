@@ -29,11 +29,11 @@ $(function() {
         History.pushState(null, $(this).text(), $(this).attr('href'));
     });
 
-    // /* look at all work-samples articles and display details on hover */
-    // /* take all articles and for each of then watch if the mouse hovers over it*/
-    // $(".work-samples article:not(.coming-soon)").each(function(){
-    //   $(this).hover(showDetails, hideDetails);
-    // });
+    /* look at all work-samples articles and display details on hover */
+    /* take all articles and for each of then watch if the mouse hovers over it*/
+    $(".work-samples article:not(.coming-soon)").each(function(){
+      $(this).hover(showDetails, hideDetails);
+    });
 
 
     function showDetails(event){
