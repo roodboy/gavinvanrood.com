@@ -31,7 +31,7 @@ $(function() {
 
     /* look at all work-samples articles and display details on hover */
     /* take all articles and for each of then watch if the mouse hovers over it*/
-    $(".work-samples article").each(function(){
+    $(".work-samples article:not(.coming-soon)").each(function(){
       $(this).hover(showDetails, hideDetails);
     });
 
