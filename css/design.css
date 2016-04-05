@@ -34,11 +34,15 @@ body {
 {
   display: block;
   text-indent: -1000px;
-  width: 350px;
-  height: 120px;
+  width: 300px;
+  height: 100px;
   background:url(../images/Gavin_logo.png);
   background:url(../images/Gavin_logo.svg);
   background-repeat: no-repeat;
+  margin-top: 38px;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
 }
 /* this styles the intro heading 3*/
 .intro h3 {
@@ -54,6 +58,7 @@ body {
 .subhead {
   color: #979797;
   font-weight: 300;
+  margin: 10px 0 0 0;
 }
 
 /* This is a comment. Use dot before title (eg work-samples) to make the link.*/
@@ -67,6 +72,18 @@ body {
   margin: 15px auto 0 auto;
   /*background: rgba(255, 255, 255, 0);*/
   float:left;
+  cursor: pointer;
+}
+
+.coming-soon {
+  opacity: 0.25;
+}
+.coming-soon *,
+.coming-soon a {
+  pointer-events: none !important;
+}
+.coming-soon h1, .coming-soon p{
+  color: #aaa;
 }
 
 .work-samples a,
@@ -77,6 +94,7 @@ body {
 {
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .work-title {
@@ -116,7 +134,7 @@ article img {
   */
   @media(min-width:600px){
     .work-samples article {
-      width: 350px;
+      width: 270px;
       margin: 10px 10px 0 0;
     }
   }
@@ -139,7 +157,7 @@ article img {
       font-weight:900;
       font-size: 10px;
       padding-top: 80px;
-      width: 67%;
+      width: 62%;
       float: left;
     }
     .intro .work-desc {
@@ -162,6 +180,10 @@ article img {
     }
   }
 
+/* make suer work detial pages don't get too wide, stop at 1400px */
+.work-samples.detail{
+  max-width: 1400px;
+}
 /* make all images on the detail page wide */
 .work-samples.detail img {
   width: 100%; /* scale the images to full width of the column */

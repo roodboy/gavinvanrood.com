@@ -14,7 +14,7 @@ $(function() {
                 //     console.log($(response));
                 //     $('#detail').html($(response).find('#detail').html()).show();
                 // });
-                $('#detail').load(State.url + ' #detail').show(800);
+                $('#detail').load(State.url + ' #ajax-detail').show(800);
             });
         } else {
             $('#detail').html(loadingMessage).hide(800);
@@ -23,8 +23,9 @@ $(function() {
     });
 
     // Capture all the links to push their url to the history stack and trigger the StateChange Event
-    $('article a').click(function(evt) {
+    $('article:not(.coming-soon) a').click(function(evt) {
         evt.preventDefault();
+        console.log("clicked on ", evt.target);
         History.pushState(null, $(this).text(), $(this).attr('href'));
     });
 
@@ -59,5 +60,3 @@ $(function() {
     }
 
 });
-
-
