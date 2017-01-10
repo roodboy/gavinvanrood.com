@@ -21,10 +21,10 @@ $(function() {
             $('#teasers').show(800);
         }
     });
-    
+
 
     // Capture all the links to push their url to the history stack and trigger the StateChange Event
-    $('article:not(.coming-soon) a').click(function(evt) {
+    $('article:not(.coming-soon, .about) a').click(function(evt) {
         evt.preventDefault();
         console.log("clicked on ", evt.target);
         History.pushState(null, $(this).text(), $(this).attr('href'));

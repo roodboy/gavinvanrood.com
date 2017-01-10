@@ -4,7 +4,7 @@
 ## Development Tips
 
 ### Run server locally
-To run locally, open Terminal.app, type `cd ` and drag the Folder in the window, hit enter.
+To run locally, open Terminal.app, type `cd ` and space, and drag the Folder in the window, hit enter.
 
 Type `python -m SimpleHTTPServer` and hit enter.
 

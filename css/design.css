@@ -39,7 +39,7 @@ body {
   background:url(../images/Gavin_logo.png);
   background:url(../images/Gavin_logo.svg);
   background-repeat: no-repeat;
-  margin-top: 38px;
+  margin-top: 18px;
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 0;
@@ -215,7 +215,7 @@ article img {
       font-family: 'Averta', sans-serif;
       font-weight:900;
       font-size: 10px;
-      padding-top: 80px;
+      padding-top: 60px;
       width: 62%;
       float: left;
     }
@@ -225,7 +225,7 @@ article img {
       font-family: 'Averta', sans-serif;
       font-weight:200;
       font-size: 12px;
-      padding-top: 80px
+      padding-top: 50px
     }
   }
   @media(min-width:1530px){
@@ -276,4 +276,28 @@ article img {
  */
 .cf {
     *zoom: 1;
+}
+
+
+
+/* Image grid*/
+
+.row {
+  clear: both;
+}
+@media (min-width: 1000px) {
+  .work-samples.detail img.grid {
+    float: left;
+  }
+  .work-samples.detail img.wide35 {
+    width: 35%;
+  }
+
+  .work-samples.detail img.wide65 {
+    width: 65%;
+  }
+
+  .work-samples.detail img.wide50 {
+    width: 50%;
+  }
 }
