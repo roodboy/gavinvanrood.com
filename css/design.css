@@ -277,27 +277,3 @@ article img {
 .cf {
     *zoom: 1;
 }
-
-
-
-/* Image grid*/
-
-.row {
-  clear: both;
-}
-@media (min-width: 1000px) {
-  .work-samples.detail img.grid {
-    float: left;
-  }
-  .work-samples.detail img.wide35 {
-    width: 35%;
-  }
-
-  .work-samples.detail img.wide65 {
-    width: 65%;
-  }
-
-  .work-samples.detail img.wide50 {
-    width: 50%;
-  }
-}
