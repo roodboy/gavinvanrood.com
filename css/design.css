@@ -93,6 +93,11 @@ body {
   text-decoration: underline;
 }
 
+.contact-icon img {
+  height: 22px;
+  margin-right: 8px;
+}
+
 .subhead {
   color: #979797;
   font-weight: 300;
@@ -222,8 +227,10 @@ article img {
       min-height: 64vh;
     }
     .intro {
-      float: left;
       width: 380px;
+      position: fixed;
+      top: 0;
+      left: 0;
     }
     .work-samples {
       color: #323232;
@@ -232,7 +239,7 @@ article img {
       font-size: 10px;
       padding-top: 60px;
       width: 62%;
-      float: left;
+      margin-left: 380px;
     }
     .intro .work-desc {
       color: #323232;
