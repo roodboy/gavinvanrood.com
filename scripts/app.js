@@ -9,26 +9,21 @@ $(function() {
         // $('#content').load(State.url);
         // Instead of the line above, you could run the code below if the url returns the whole page instead of just the content (assuming it has a `#content`):
         if (State.url.indexOf('detail') >= 0){
-            $('#teasers').hide(300, function(){
+            $('#teasers').fadeOut(300, function(){
               console.log('loading details for', State.url)
-                // $.get(State.url, function(response) {
-                //     console.log($(response));
-                //     $('#detail').html($(response).find('#detail').html()).show();
-                // });
                 $('#detail').load(State.url + ' #ajax-detail', function() {
-                  console.log('loaded')
-                  $('#detail').show(800);
+                  $('#detail').fadeIn(800);
                 })
             });
         } else {
-            $('#detail').html(loadingMessage).hide(800);
-            $('#teasers').show(800);
+          console.log('not a detial page');
+            $('#detail').html(loadingMessage).fadeOut(800);
+            $('#teasers').fadeIn(800);
         }
     });
-
-
+    
     // Capture all the links to push their url to the history stack and trigger the StateChange Event
-    $('article:not(.coming-soon, .about) a').click(function(evt) {
+    $('article:not(.coming-soon, .about) a, .intro a').click(function(evt) {
         evt.preventDefault();
         console.log("clicked on ", evt.target);
         History.pushState(null, $(this).text(), $(this).attr('href'));
