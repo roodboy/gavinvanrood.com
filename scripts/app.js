@@ -10,11 +10,15 @@ $(function() {
         // Instead of the line above, you could run the code below if the url returns the whole page instead of just the content (assuming it has a `#content`):
         if (State.url.indexOf('detail') >= 0){
             $('#teasers').hide(300, function(){
+              console.log('loading details for', State.url)
                 // $.get(State.url, function(response) {
                 //     console.log($(response));
                 //     $('#detail').html($(response).find('#detail').html()).show();
                 // });
-                $('#detail').load(State.url + ' #ajax-detail').show(800);
+                $('#detail').load(State.url + ' #ajax-detail', function() {
+                  console.log('loaded')
+                  $('#detail').show(800);
+                })
             });
         } else {
             $('#detail').html(loadingMessage).hide(800);
