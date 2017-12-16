@@ -9,15 +9,22 @@ $(function() {
         // $('#content').load(State.url);
         // Instead of the line above, you could run the code below if the url returns the whole page instead of just the content (assuming it has a `#content`):
         if (State.url.indexOf('detail') >= 0){
-            $('#teasers').fadeOut(300, function(){
+            $('#teasers, #about').fadeOut(300, function(){
               console.log('loading details for', State.url)
                 $('#detail').load(State.url + ' #ajax-detail', function() {
                   $('#detail').fadeIn(800);
                 })
             });
+        } else if (State.url.indexOf('about') >= 0){
+            $('#teasers, #details').fadeOut(300, function(){
+                $('.desc-holder').html('');
+                $('#about').load(State.url + ' #ajax-detail', function() {
+                  $('#about').fadeIn(800);
+                })
+            });
         } else {
           console.log('not a detial page');
-            $('#detail').html(loadingMessage).fadeOut(800);
+            $('#detail, #about').html(loadingMessage).fadeOut(800);
             $('#teasers').fadeIn(800);
         }
     });
