@@ -60,6 +60,22 @@ body {
   margin-top: 2em;
 }
 
+.about-nav .about-link {
+  display: block;
+}
+
+.about-nav.about-active .about-link {
+  display: none;
+}
+
+.about-nav .projects-link {
+  display: none;
+}
+
+.about-nav.about-active .projects-link {
+  display: block;
+}
+
 .about-nav a,
 .about-nav a:link,
 .about-nav a:hover,
