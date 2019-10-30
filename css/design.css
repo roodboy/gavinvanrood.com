@@ -303,6 +303,10 @@ article img {
   margin-bottom: 25px; /* add space between the images as thesy stack */
 }
 
+.hidden {
+  display: none;
+}
+
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
