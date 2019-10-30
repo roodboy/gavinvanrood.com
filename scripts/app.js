@@ -18,7 +18,7 @@ $(function() {
       });
       $(".about-nav").removeClass("about-active");
     } else if (State.url.indexOf("about") >= 0) {
-      $("#teasers, #details").fadeOut(300, function() {
+      $("#teasers, #details, #detail").fadeOut(300, function() {
         $(".desc-holder").html("");
         $("#about").load(State.url + " #ajax-detail", function() {
           $("#about").fadeIn(800);
